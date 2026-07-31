@@ -1,0 +1,361 @@
+:root {
+  --color-primary: #e87311;
+  --color-secondary: #dd483f;
+  --color-brown: #d95802;
+  --color-orange: #e87311;
+  --color-red: #dd4640;
+  --color-blue: #5582fc;
+}
+.orange-color {
+  color: var(--color-orange);
+}
+.red-color {
+  color: var(--color-red);
+}
+.blue-color {
+  color: var(--color-blue);
+}
+.brown-color {
+  color: var(--color-brown);
+}
+.action-btn-bg {
+  background-color: #faedd7;
+}
+
+body {
+  background-color: #fdfbec;
+}
+
+a,
+span {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.w-40 {
+  width: 2.5rem;
+}
+.h-40 {
+  height: 2.5rem;
+}
+
+.w-51 {
+  width: 3.17rem;
+}
+
+.h-51 {
+  height: 3.17rem;
+}
+
+.fs-14p {
+  font-size: 0.875rem;
+}
+.fs-10p {
+  font-size: 0.625rem;
+}
+.fs-18px {
+  font-size: 1.125rem;
+}
+.fs-16px {
+  font-size: 1rem;
+}
+
+.gradient-bg {
+  --from: var(--color-primary);
+  --via: var(--color-primary);
+  --to: var(--color-secondary);
+  --direction: to right;
+
+  background: linear-gradient(
+    var(--direction),
+    var(--from),
+    var(--via),
+    var(--to)
+  );
+}
+
+.bg-linear-to-br {
+  --direction: to bottom right;
+}
+
+.from-primary {
+  --from: var(--color-primary);
+}
+
+.to-secondary {
+  --to: var(--color-secondary);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.header-icon-btn {
+  cursor: pointer;
+  color: #6b7280;
+  transition: color 0.2s ease;
+}
+
+.header-icon-btn:hover {
+  color: var(--color-primary);
+}
+
+.recipe-img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.badge-rating {
+  top: 1rem;
+  left: 1rem;
+}
+
+.info-bar {
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+}
+
+.tag-difficulty {
+  background-color: #d1fae5;
+  color: #059669;
+}
+
+.tag-category {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  color: var(--color-gray);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    font-size 0.1ms ease;
+  background: transparent;
+}
+
+.nav-tabs .nav-link:hover {
+  color: var(--color-primary);
+  border-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--color-primary);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.ingredients-list {
+  background-color: #fdf9ed;
+  height: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.ingredient-number {
+  width: 1.625rem;
+  height: 1.625rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.instruction-number {
+  width: 3rem;
+  height: 2.9375rem;
+  background-color: var(--color-primary);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+dt {
+  font-weight: 500;
+  color: #6b7280;
+}
+
+dd {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.nutrition-item {
+  background-color: #f9fafb;
+}
+
+.nutrition-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.bg-l-orange {
+  background-color: #faedd7;
+}
+.icon-orange {
+  color: #d95802;
+}
+
+.bg-l-blue {
+  background-color: #dbeafe;
+}
+.icon-blue {
+  color: #2563eb;
+}
+
+.bg-l-yellow {
+  background-color: #fef3c7;
+}
+.icon-yellow {
+  color: #d97706;
+}
+
+.bg-l-red {
+  background-color: #fee2e2;
+}
+.icon-red {
+  color: #dc2626;
+}
+
+.bg-l-green {
+  background-color: #d1fae5;
+}
+.icon-green {
+  color: #059669;
+}
+
+.bg-l-pink {
+  background-color: #fce7f3;
+}
+.icon-pink {
+  color: #db2777;
+}
+
+.nutrition-grid.show {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.chef-tip-item {
+  background-color: #fefbec;
+  border-left: 4px solid #fbbf24;
+}
+
+.tip-check {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.tab-wrapper {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 1.5rem;
+}
+
+.try-another-btn {
+  color: white;
+  font-weight: 500;
+  padding-block: 12px;
+}
+
+.recipe-card {
+  height: 700px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.row.g-0 {
+  height: 100%;
+}
+
+.recipe-image-col {
+  height: 100%;
+}
+
+.recipe-image-side {
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+}
+
+.recipe-text-col {
+  height: 100%;
+  overflow-y: auto;
+  border-radius: 0 20px 20px 0;
+}
+
+
+.ingredients-list::-webkit-scrollbar,
+.recipe-text-col::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ingredients-list::-webkit-scrollbar-track,
+.recipe-text-col::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.ingredients-list::-webkit-scrollbar-thumb,
+.recipe-text-col::-webkit-scrollbar-thumb {
+  background-color: #F8DDD4;
+  border-radius: 10px;
+}
+
+.ingredients-list::-webkit-scrollbar-thumb:hover,
+.recipe-text-col::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-brown);
+}
+
+.try-another-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(232, 114, 20, 0.3);
+}

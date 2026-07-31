@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="border-bottom border-2 bg-white shadow-sm">
+      <div
+        class="container-xxl d-flex justify-content-between align-items-center p-3"
+      >
+        <div class="d-flex align-items-center gap-2">
+          <div
+            class="d-flex justify-content-center align-items-center w-51 h-51 rounded-circle gradient-bg bg-linear-to-br from-primary to-secondary"
+          >
+            <i class="fa-solid fa-utensils text-white fs-5"></i>
+          </div>
+          <div class="">
+            <h1 class="m-0 fs-4 fw-bold">What's For Dinner</h1>
+            <p class="m-0 text-muted small">Your daily meal inspiration</p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+          <i class="fa-solid fa-bookmark fs-5 header-icon-btn"></i>
+          <i class="fa-solid fa-clock-rotate-left fs-5 header-icon-btn"></i>
+          <i class="fa-solid fa-gear fs-5 header-icon-btn"></i>
+          <div
+            class="d-flex justify-content-center align-items-center w-40 h-40 rounded-circle gradient-bg bg-linear-to-br from-primary to-secondary"
+          >
+            <img
+              src="./images/avatar-1.jpg"
+              alt="user avatar"
+              class="rounded-circle"
+              width="35"
+              height="35"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container-xxl">
+        <article class="recipe-card my-5">
+          <div class="row g-0">
+            <div class="col-12 col-lg-5 recipe-image-col">
+              <figure class="position-relative recipe-image-side">
+                <img
+                  class="recipe-img"
+                  id="meal-image"
+                  src="./images/thai-green-curry.webp"
+                  alt="Thai Green Curry dish"
+                />
+                <div
+                  class="badge-rating position-absolute d-flex align-items-center gap-2 bg-white rounded-pill px-3 py-2"
+                >
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <span id="meal-rating" class="text-black fw-medium">4.7</span>
+                  <span id="meal-reviews" class="text-muted fs-14p"
+                    >(312 reviews)</span
+                  >
+                </div>
+
+                <div
+                  class="info-bar position-absolute bg-white d-flex align-items-center justify-content-evenly rounded-4 py-3"
+                >
+                  <div
+                    class="info-item d-flex flex-column align-items-center gap-1"
+                  >
+                    <i class="fa-solid fa-clock orange-color fs-4"></i>
+                    <span class="fs-14p text-muted">Prep Time</span>
+                    <span id="meal-prep-time" class="fs-6 fw-bolder"
+                      >15 min</span
+                    >
+                  </div>
+                  <div
+                    class="info-item d-flex flex-column align-items-center gap-1"
+                  >
+                    <i class="fa-solid fa-fire red-color fs-4"></i>
+                    <span class="fs-14p text-muted">Cook Time</span>
+                    <span id="meal-cook-time" class="fs-6 fw-bolder"
+                      >25 min</span
+                    >
+                  </div>
+                  <div
+                    class="info-item d-flex flex-column align-items-center gap-1"
+                  >
+                    <i class="fa-solid fa-users blue-color fs-4"></i>
+                    <span class="fs-14p text-muted">Servings</span>
+                    <span id="meal-servings" class="fs-6 fw-bolder"
+                      >4 people</span
+                    >
+                  </div>
+                </div>
+              </figure>
+            </div>
+
+            <div class="col-12 col-lg-7 p-5 bg-white recipe-text-col">
+              <div class="tags">
+                <span
+                  id="meal-difficulty"
+                  class="badge tag-difficulty rounded-pill fw-medium"
+                  >Intermediate</span
+                >
+                <span
+                  id="meal-category"
+                  class="badge tag-category rounded-pill fw-medium"
+                  >Asian</span
+                >
+              </div>
+              <div class="title-row d-flex justify-content-between mt-2">
+                <h2 class="fs-1 fw-bold" id="meal-name">Thai Green Curry</h2>
+                <div
+                  class="action-buttons d-flex justify-content-center align-items-center gap-2"
+                >
+                  <button class="w-51 h-51 rounded-3 action-btn-bg border-0">
+                    <i class="fa-solid fa-bookmark brown-color fs-6"></i>
+                  </button>
+                  <button class="w-51 h-51 rounded-3 action-btn-bg border-0">
+                    <i class="fa-solid fa-share brown-color fs-6"></i>
+                  </button>
+                </div>
+              </div>
+              <p class="fs-18px text-muted" id="meal-description">
+                Vibrant and aromatic curry with vegetables and coconut milk
+              </p>
+
+              <div class="tab-wrapper mt-5 mb-4">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item">
+                    <button
+                      class="nav-link active"
+                      data-bs-toggle="tab"
+                      data-bs-target="#ingredients-panel"
+                    >
+                      <i class="fa-solid fa-list-check me-1"></i> Ingredients
+                    </button>
+                  </li>
+                  <li class="nav-item">
+                    <button
+                      class="nav-link"
+                      data-bs-toggle="tab"
+                      data-bs-target="#instructions-panel"
+                    >
+                      <i class="fa-solid fa-book-open me-1"></i> Instructions
+                    </button>
+                  </li>
+                  <li class="nav-item">
+                    <button
+                      class="nav-link"
+                      data-bs-toggle="tab"
+                      data-bs-target="#nutrition-panel"
+                    >
+                      <i class="fa-solid fa-chart-pie me-1"></i> Nutrition
+                    </button>
+                  </li>
+                  <li class="nav-item">
+                    <button
+                      class="nav-link"
+                      data-bs-toggle="tab"
+                      data-bs-target="#chef-tips-panel"
+                    >
+                      <i class="fa-solid fa-lightbulb me-1"></i> Chef's Tips
+                    </button>
+                  </li>
+                </ul>
+
+                <div class="tab-content mt-5">
+                  <ul
+                    class="tab-pane fade show active ingredients-list rounded-4 py-2"
+                    id="ingredients-panel"
+                  >
+                    <li
+                      class="ingredient-item d-flex align-items-center gap-3 mb-3"
+                    >
+                      <span class="ingredient-number">1</span>
+                      <span>2 tablespoons green curry paste</span>
+                    </li>
+                    <li
+                      class="ingredient-item d-flex align-items-center gap-3 mb-3"
+                    >
+                      <span class="ingredient-number">2</span>
+                      <span>400ml coconut milk</span>
+                    </li>
+
+                    <li
+                      class="ingredient-item d-flex align-items-center gap-3 mb-3"
+                    >
+                      <span class="ingredient-number">3</span>
+                      <span>300g chicken breast, sliced</span>
+                    </li>
+
+                    <li
+                      class="ingredient-item d-flex align-items-center gap-3 mb-3"
+                    >
+                      <span class="ingredient-number">4</span>
+                      <span>1 red bell pepper, sliced</span>
+                    </li>
+
+                    <li
+                      class="ingredient-item d-flex align-items-center gap-3 mb-3"
+                    >
+                      <span class="ingredient-number">5</span>
+                      <span>100g green beans</span>
+                    </li>
+
+                    <li
+                      class="ingredient-item d-flex align-items-center gap-3 mb-3"
+                    >
+                      <span class="ingredient-number">6</span>
+                      <span>1 eggplant, cubed</span>
+                    </li>
+
+                    <li
+                      class="ingredient-item d-flex align-items-center gap-3 mb-3"
+                    >
+                      <span class="ingredient-number">7</span>
+                      <span>2 tablespoons fish sauce</span>
+                    </li>
+
+                    <li
+                      class="ingredient-item d-flex align-items-center gap-3 mb-3"
+                    >
+                      <span class="ingredient-number">8</span>
+                      <span>1 tablespoon palm sugar</span>
+                    </li>
+
+                    <li
+                      class="ingredient-item d-flex align-items-center gap-3 mb-3"
+                    >
+                      <span class="ingredient-number">9</span>
+                      <span>Fresh Thai basil leaves</span>
+                    </li>
+                  </ul>
+
+                  <ol
+                    class="tab-pane fade instructions-list"
+                    id="instructions-panel"
+                  >
+                    <li
+                      class="instruction-item d-flex align-items-center mb-4 gap-3"
+                    >
+                      <span class="instruction-number rounded-4">1</span>
+                      <span
+                        >Heat a large pot or wok over medium heat. Add curry
+                        paste and cook for 1 minute until fragrant.
+                      </span>
+                    </li>
+
+                    <li
+                      class="instruction-item d-flex align-items-center mb-4 gap-3"
+                    >
+                      <span class="instruction-number rounded-4">2</span>
+                      <span
+                        >Add half the coconut milk and stir to combine with the
+                        curry paste.</span
+                      >
+                    </li>
+
+                    <li
+                      class="instruction-item d-flex align-items-center mb-4 gap-3"
+                    >
+                      <span class="instruction-number rounded-4">3</span>
+                      <span
+                        >Add sliced chicken and cook until no longer pink, about
+                        5 minutes.</span
+                      >
+                    </li>
+
+                    <li
+                      class="instruction-item d-flex align-items-center mb-4 gap-3"
+                    >
+                      <span class="instruction-number rounded-4">4</span>
+                      <span
+                        >Add remaining coconut milk, vegetables, fish sauce, and
+                        palm sugar.</span
+                      >
+                    </li>
+
+                    <li
+                      class="instruction-item d-flex align-items-center mb-4 gap-3"
+                    >
+                      <span class="instruction-number rounded-4">5</span>
+                      <span
+                        >Simmer for 15-20 minutes until vegetables are tender
+                        and sauce has thickened.</span
+                      >
+                    </li>
+                  </ol>
+
+                  <dl class="tab-pane fade nutrition-grid" id="nutrition-panel">
+                    <div
+                      class="nutrition-item d-flex align-items-center justify-content-between rounded-3 p-3"
+                    >
+                      <div class="d-flex align-items-center gap-3">
+                        <span
+                          class="nutrition-icon bg-calories rounded-2 bg-l-orange"
+                        >
+                          <i class="fa-solid fa-fire icon-orange"></i>
+                        </span>
+                        <dt>Calories</dt>
+                      </div>
+                      <dd id="meal-calories">420 kcal</dd>
+                    </div>
+
+                    <div
+                      class="nutrition-item d-flex align-items-center justify-content-between rounded-3 p-3"
+                    >
+                      <div class="d-flex align-items-center gap-3">
+                        <span class="nutrition-icon bg-l-blue rounded-2">
+                          <i class="fa-solid fa-dumbbell icon-blue"></i>
+                        </span>
+                        <dt>Protein</dt>
+                      </div>
+                      <dd id="meal-protein">26g</dd>
+                    </div>
+
+                    <div
+                      class="nutrition-item d-flex align-items-center justify-content-between rounded-3 p-3"
+                    >
+                      <div class="d-flex align-items-center gap-3">
+                        <span class="nutrition-icon bg-l-yellow rounded-2">
+                          <i class="fa-solid fa-wheat-awn icon-yellow"></i>
+                        </span>
+                        <dt>Carbohydrates</dt>
+                      </div>
+                      <dd id="meal-carbs">22g</dd>
+                    </div>
+
+                    <div
+                      class="nutrition-item d-flex align-items-center justify-content-between rounded-3 p-3"
+                    >
+                      <div class="d-flex align-items-center gap-3">
+                        <span class="nutrition-icon bg-l-red rounded-2">
+                          <i class="fa-solid fa-droplet icon-red"></i>
+                        </span>
+                        <dt>Fat</dt>
+                      </div>
+                      <dd id="meal-fat">26g</dd>
+                    </div>
+
+                    <div
+                      class="nutrition-item d-flex align-items-center justify-content-between rounded-3 p-3"
+                    >
+                      <div class="d-flex align-items-center gap-3">
+                        <span class="nutrition-icon bg-l-green rounded-2">
+                          <i class="fa-solid fa-seedling icon-green"></i>
+                        </span>
+                        <dt>Fiber</dt>
+                      </div>
+                      <dd id="meal-fiber">5g</dd>
+                    </div>
+
+                    <div
+                      class="nutrition-item d-flex align-items-center justify-content-between rounded-3 p-3"
+                    >
+                      <div class="d-flex align-items-center gap-3">
+                        <span class="nutrition-icon bg-l-pink rounded-2">
+                          <i class="fa-solid fa-cube icon-pink"></i>
+                        </span>
+                        <dt>Sodium</dt>
+                      </div>
+                      <dd id="meal-sodium">890mg</dd>
+                    </div>
+                  </dl>
+
+                  <ul class="tab-pane fade chef-tips-list" id="chef-tips-panel">
+                    <li
+                      class="chef-tip-item d-flex align-items-center gap-3 rounded-3 mb-4 py-3 px-3"
+                    >
+                      <span class="tip-check">
+                        <i class="fa-solid fa-check fs-10p"></i>
+                      </span>
+                      <span
+                        >Adjust spice level by using more or less curry
+                        paste</span
+                      >
+                    </li>
+
+                    <li
+                      class="chef-tip-item d-flex align-items-center gap-3 rounded-3 mb-4 py-3 px-3"
+                    >
+                      <span class="tip-check">
+                        <i class="fa-solid fa-check fs-10p"></i>
+                      </span>
+                      <span
+                        >Add vegetables in stages based on cooking time
+                        needed</span
+                      >
+                    </li>
+
+                    <li
+                      class="chef-tip-item d-flex align-items-center gap-3 rounded-3 mb-4 py-3 px-3"
+                    >
+                      <span class="tip-check">
+                        <i class="fa-solid fa-check fs-10p"></i>
+                      </span>
+                      <span
+                        >Fresh Thai basil is essential for authentic
+                        flavor</span
+                      >
+                    </li>
+
+                    <li
+                      class="chef-tip-item d-flex align-items-center gap-3 rounded-3 mb-4 py-3 px-3"
+                    >
+                      <span class="tip-check">
+                        <i class="fa-solid fa-check fs-10p"></i>
+                      </span>
+                      <span
+                        >Use full-fat coconut milk for richest, creamiest
+                        sauce</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <button
+                id="new-recipe-btn"
+                class="try-another-btn d-flex align-items-center gap-2 border-0 px-3 rounded-3 gradient-bg bg-linear-to-r from-primary to-secondary"
+              >
+                <i class="fa-solid fa-arrows-rotate"></i>
+                Try Another Recipe
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
