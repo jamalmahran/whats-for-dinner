@@ -1,0 +1,27 @@
+/* ===== Mobile & Tablet (below lg) ===== */
+@media (max-width: 991.98px) {
+  .recipe-card,
+  .row.g-0,
+  .recipe-image-col,
+  .recipe-text-col {
+    height: auto;
+  }
+
+  .recipe-image-side {
+    height: 320px;
+    margin: 0;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .recipe-text-col {
+    overflow-y: visible;
+    border-radius: 0 0 20px 20px;
+    padding: 1.5rem !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .nutrition-grid.show {
+    grid-template-columns: 1fr;
+  }
+}
